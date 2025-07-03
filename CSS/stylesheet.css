@@ -1,0 +1,187 @@
+/* Preview Grid - fixed, non-scrollable, always visible */
+.preview-gallery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fffaf5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+  z-index: 1;
+  transition: filter 0.4s ease, opacity 0.4s ease;
+}
+
+/* Product images */
+.preview-gallery img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Logo overlay */
+.logo-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: transform 0.4s ease, filter 0.4s ease, opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.logo-overlay img {
+  width: 500px;
+  transition: inherit;
+}
+
+/* Hidden class for fades */
+.hidden {
+  opacity: 0;
+}
+
+/* Main content - appears after logo transition */
+.main-content {
+  position: relative;
+  z-index: 3;
+  padding: 120vh 20px 100px;
+  transition: opacity 0.6s ease;
+  opacity: 0;
+}
+
+.main-content.visible {
+  opacity: 1;
+}
+
+.main-content section {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+/* Homepage content */
+p {
+  width: 100%;
+}
+
+/* Video */
+.video-section {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* makes it responsive */
+}
+
+.video-container {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.video-container video {
+  max-height: 500px;
+  width: auto;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.video-text {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.video-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.video-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Reviews */
+.review-section {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.review-carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.review-bubble {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid #f1e2d3;
+}
+
+/* Speech bubble tail */
+.review-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 40px;
+  width: 0;
+  height: 0;
+  border: 12px solid transparent;
+  border-top-color: white;
+}
+
+.review-bubble.active {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1;
+}
+
+.stars {
+  color: #f5a623;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.review-text {
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.reviewer-name {
+  font-weight: bold;
+}
+
+button.prev,
+button.next {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+button.prev {
+  left: -40px;
+}
+
+button.next {
+  right: -40px;
+}
+
+
+

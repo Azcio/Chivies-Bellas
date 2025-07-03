@@ -1,0 +1,63 @@
+.flip-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+   position: relative;
+   z-index: 10;
+}
+
+.flip-wrapper {
+  width: 250px;
+  height: 400px;
+  perspective: 800px;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.front-side,
+.back-side {
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.front-side {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.front-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.back-side {
+  background-color: #333;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.flip-wrapper.flipped .card {
+  transform: rotateY(180deg);
+}

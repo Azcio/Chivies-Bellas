@@ -1,0 +1,28 @@
+.about-intro,
+.about-mission,
+.about-scroll-section {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.about-intro,
+.about-mission{
+  max-width: 65%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+   background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(2px);
+}
+
+.about-intro p,
+.about-intro h1,
+.about-mission p {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+} 
+
+.maker-img {
+  width: 30%;
+  border-radius: 5%;
+}

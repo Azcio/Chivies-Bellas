@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chivies Bellas Contact</title>
+    <link rel="stylesheet" href="/CSS/global.css">
+    <link rel="stylesheet" href="/CSS/contact.css">
+</head>
+<body>
+
+    <section class="fixed-preview-gallery">
+    <img src="/images/products/Elephant.jpg" alt="">
+    <img src="/images/products/bear candle.png" alt="">
+    <img src="/images/products/flower in mint.jpg" alt="">
+    <img src="/images/products/purple rose.jpg" alt="">
+    <img src="/images/products/pinkflowers.jpg" alt="">
+    <img src="/images/products/rose.jpg" alt="">
+    
+    <!-- Overlay logo container -->
+    <div class="fixed-logo-overlay">
+      <img src="/images/logo/Logo.png" alt="Chivies Bellas Logo" class="fixed-logo-img">
+    </div>
+  </section>
+
+  <!--Navigation Bar Section-->
+   <div class="nav-wrapper">
+    <header class="navbar">
+      <div class="nav-left">
+        <a href="../index.html">
+        <img src="../images/logo/Logo.png" alt="Logo" class="nav-logo" />
+      </a>
+      </div>
+      <div class="nav-center">
+    <span class="business-name">Chivies Bellas</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="/pages/about.html">About</a>
+        <a href="/pages/products.html">Products</a>
+        <a href="/pages/contact.html">Contact</a>
+      </nav>
+    </header>
+  </div>
+
+  <section class="contact-page">
+  <h1>Get in Touch</h1>
+  <p>Have a question about our candles, shipping, or custom orders? We’d love to hear from you!</p>
+
+  <div class="contact-container">
+    <form class="contact-form">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="e.g. Sofia Morales" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" placeholder="e.g. sofia@email.com" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+      <div class="form-message" aria-live="polite"></div> <!-- message container -->
+    </form>
+
+    <div class="contact-info">
+      <h2>Our Details</h2>
+      <p><strong>Email:</strong> hello@ChiviesCandles.com</p>
+      <p><strong>Phone:</strong> +34 612 345 678</p>
+      <p><strong>Location:</strong> England, London</p>
+      <p><strong>Instagram:</strong> <a href="https://www.instagram.com/chivis_chivita77/">@chivis_chivita77</a></p>
+    </div>
+  </div>
+</section>
+
+
+
+<div class="transition-overlay hidden">
+  <div class="flame"></div>
+</div>
+<script src="/Js/global.js"></script>
+<script src="/Js/contact.js"></script>
+</body>
+</html>
